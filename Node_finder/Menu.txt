@@ -1,0 +1,24 @@
+#################################################################
+#                  *S C R I P T    M I N D S*                   #
+#################################################################
+
+
+
+
+
+
+#################################################################
+#Node_finder
+
+
+import nuke
+from Node_finder import find_node_popup # Import the function from Node_finder.py
+
+# Define the icon path
+Logo = "C:/Program Files/Nuke14.0v1/plugins/icons/Scriptminds_ICON.png"
+
+# Create the main ScriptMinds menu with an icon
+scriptminds_menu = nuke.menu('Nuke').addMenu('ScriptMinds', icon=Logo)
+
+# Add the "Find Directory" command under the ScriptMinds menu
+scriptminds_menu.addCommand('ScriptMinds/NodeFinder', find_node_popup, 'Ctrl+Space')
